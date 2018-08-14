@@ -1,0 +1,99 @@
+.visually-hidden { // если нужно скрыть текст который доступен для читалок 
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+
+    clip: rect(0 0 0 0); // обрезаем в 0 
+    overflow: hidden;
+}
+.hidden {
+    display: none;
+}
+b {
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.btn, 
+.menu__user,
+ul,
+li {
+    line-height: 24px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 12px 90px;
+    border: 1px solid #e5ddd5;
+    background-color: #f8f5f2;
+    color: #000;
+    vertical-align: top;
+    font-size: 18px;
+
+    &:hover {
+        border-color: #d5cabe;
+    }
+    &:active {
+        background-color: #d5c9bd;
+        color: gray;
+    }
+    &--news {
+        width: 280px;
+        margin: 0 auto;
+        padding: 12px 73px;
+    }
+
+    &--feedback, &--to-main{
+        display: none;
+    }
+    &--contacts, &--copyright {
+        padding: 12px, 73px;
+        border-color: #3f3f3f;
+        background-color: #292929;
+        color: #fff;
+    }
+    &--contacts:hover, &--copyright:hover {
+        border-color: #515151;
+    }
+
+    &--contacts:active, &--copyright:active {
+        border-color: transparent;
+        background-color: transparent;
+        color: grey;
+    }
+
+    &--copyright {
+        padding: 12px 87px;
+    }
+}
+
+
+input[type=checkbox],input[type=radio] {
+    display: none;
+    margin: 20px
+}
+
+input[type=checkbox]+label input[type=radio]+label {
+    display: inline-block;
+    vertical-align: middle
+}
+
+.header {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center
+}

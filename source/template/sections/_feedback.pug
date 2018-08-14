@@ -1,0 +1,33 @@
+section.feedback
+    h2.feedback__header Отзывы о нас 
+    .feedback__items
+        input.slider__selector#feedback-1(type="radio" name="feedback" checked)
+        input.slider__selector#feedback-2(type="radio" name="feedback" checked)
+        input.slider__selector#feedback-3(type="radio" name="feedback" checked)
+        .feedback__item.feedback__item--travis.feedback__item--active
+            .feedback__photo
+                img.feedback__image(src="img/travis.jpg" alt="Тревис Баркер")
+            b.feedback__title Тревис Баркер
+            p.feedback__text Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
+
+        .feedback__item.feedback__item--jonh
+            .feedback__photo
+                img.feedback__image(src="img/travis.jpg" alt="Джон Смит")
+            b.feedback__title Джон Смит
+            p.feedback__text Отличную стрижку мне сделали ребята.
+
+        .feedback__item.feedback__item--ivan
+            .feedback__photo
+                img.feedback__image(src="img/travis.jpg" alt="Иван Бородайло")
+            b.feedback__title Иван Бородайло
+            p.feedback__text В Бородинском ваша борода в надёжных руках!        
+        button.feedback__toggle.feedback__toggle--prev(type="button") Предидущий
+        button.feedback__toggle.feedback__toggle--next(type="button") Следующий
+
+        .slider.slider--feedback
+            label.slider__btn.slider__btn--feedback(for="feeback-1")
+            label.slider__btn.slider__btn--feedback(for="feeback-2")
+            label.slider__btn.slider__btn--feedback(for="feeback-3")
+
+        a.btn.btn--feedback(href="#") Оставить свой    
+

@@ -1,0 +1,36 @@
+.news {
+    @include container-fluid;
+    background-color: $news-beckground-color;
+    padding: 75px 20px 30px;
+    &__title{
+        text-align: center;
+        color: $black;
+        font-family: $mainFontBold;
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    &__item{
+        padding: 25px 0 25px 70px;
+        position: relative;
+    }
+    &__date {
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 0;
+        background: black;
+        text-align: center;
+        width: 50px;
+        height: 50px;
+        font-size: 16px;
+        line-height: 16px;
+        &-big{
+            display: block;
+            font-family: $mainFontBold;
+            font-size: 30px;
+            line-height: 30px;
+        }
+    }
+
+}

@@ -1,0 +1,43 @@
+mixin header
+    header.header
+        nav.menu
+            .menu__toggle.menu__toggle--opened Открыть
+            .menu__wrapper.menu__wrapper--opened
+                ul.menu__list
+                    li.menu__item.menu__item--show
+                        a.menu__link.menu__link--active Главная
+                    li.menu__item
+                        a.menu__link(href="#") Наши работы
+                    li.menu__item
+                        a.menu__link(href="#") Записатся
+                    li.menu__item
+                        a.menu__link(href="#") Контакты
+                    li.menu__item
+                        a.menu__link(href="#") HTML Academy                
+                .menu__user
+                    a.menu__login(href="#") Вход
+        .header__logo.logo
+            a(href="/").logo__link
+                svg(class="logo__image" width="230" height="85")
+                    use(xlink:href="#logo")
+                                
+
+mixin footer
+    footer.footer
+        section.contacts
+            b.contact__title Барбершоп Бородинский
+            p.contact__text г. Санкт-Петербург, ул. Большая Конюшенная 19/8
+            a.btn.btn--contacts(href="tel:+78125556666")
+                span.contacts__tel Tel.:
+                | +7 (812) 555-66-66
+        section.social
+            b.social__title Давайте дружить!
+            .social__icons
+                a.social-btn.social-btn--vk(href="#") VK
+                a.social-btn.social-btn--fb(href="#") FB
+                a.social-btn.social-btn--ig(href="#") Instagram
+        section.copyright
+            p.copyright__title Разработано:
+            a.btn.btn--copyright(href="#") HTML Academy       
+
+                            

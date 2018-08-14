@@ -1,0 +1,164 @@
+.prices {
+    position: relative;
+    @include container-fluid;
+    &__header{
+        background-color: $white;
+        padding: 30px 40px;
+        text-align: center;
+    }
+    &__title {
+        font-family: $mainFontBold;
+        text-transform: uppercase;
+        font-size: 30px;
+        color: $black;
+        margin-bottom: 25px;
+    }
+    &__text {
+        color: $black;
+    }
+
+    &__list {
+        width: 100%;
+        min-width: 320px;
+        border-collapse: collapse;
+        & tr:nth-child(odd){
+            background-color: $prices-tr-odd;
+        }
+        & tr::nth-child(even){
+            background-color: $price-tr-even;
+        }
+    }
+    &__value {
+        width: 50%;
+        font-family: $mainFontBold;
+        font-size: 40px;
+        padding: 22px 0 22px 25px;
+        line-height: 40px;
+        vertical-align: top;
+    }
+    &__field {
+        height: 50%;
+        text-align: right;
+        font-family: $mainFont;
+        font-size: 18px;
+        padding: 0 25px 0 0;
+        line-height: 18px;
+    }
+
+    &__note{
+        &--top{
+            display: none;
+        }
+    }
+
+}
+
+@media #{$tablet-widths} {
+    .prices {
+        margin-top: -200px;
+        &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            border: 12px solid white;
+            border-bottom-color: transparent;
+            border-left-color: transparent;
+            top: 40px;
+            left: -20px;
+        }
+        &__header{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 35px 80px 35px 40px;
+            text-align: left;
+        }
+        &__title {
+            width: 50%;
+            text-transform: none;
+            font-size: 40px;
+            line-height: 40px;
+        }
+        &__text {
+            width: 50%;
+            font-size: 20px;
+            line-height: 27px;
+            padding: 0 0 0 30px;
+        }
+
+        &__note--top{
+            display: block;
+            color: $black;
+            margin-top: auto;
+        }
+        &__note--bottom {
+            display: none;
+        }
+        &__list {
+            display: block;
+        }
+        & tbody {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        & tr {
+            display: block;
+            width: 50%;
+            padding: 35px;
+            padding-right: 0;
+            
+            &:nth-child(1){
+                background-color: $prices-tr-one-teblet-color;
+            }        
+            &:nth-child(2){
+                background-color: $prices-tr-two-teblet-color;
+            }        
+            &:nth-child(3){
+                background-color: $prices-tr-three-teblet-color;
+            }        
+            &:nth-child(4){
+                background-color: $prices-tr-four-teblet-color;
+            }        
+        }
+
+        &__value {
+            display: block;
+            width: auto;
+            padding: 0;
+            font-size: 72px;
+            line-height: 72px;
+        }
+        &__field {
+            display: block;
+            padding: 0;
+            text-align: left;
+            font-size: 20px;
+            & br{
+                display: none;
+            }
+        }
+
+    }
+}
+
+@media #{$desktop-widths} {
+    .prices {
+        display: flex;
+        margin-top: -160px;
+        
+
+        &__header{
+            flex-wrap: nowrap;
+            flex-direction: column;
+        }
+        &__title{
+            width: auto;
+            padding: 0;
+        }
+        &__text {
+            width: auto;
+            padding: 0;
+
+        }
+    }
+
+}

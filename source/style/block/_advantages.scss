@@ -1,0 +1,106 @@
+.advantages {
+    @include container-fluid;
+    
+    &__wrapper {
+        padding: 35px 0 0 0;
+    }
+
+    &__item{
+        padding: 155px 40px 20px;
+        text-align: center;
+        position: relative;
+
+        &:before{
+            content: '';
+            position: absolute;
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-size: auto;
+            background-repeat: no-repeat;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            
+        }
+        &--fast:before{
+            background-image: url(../img/advantage-1-illustration.svg)
+        }
+        &--cool:before{
+            background-image: url(../img/advantage-2-illustration.svg)
+        }
+        &--expensive:before{
+            background-image: url(../img/advantage-3-illustration.svg)
+        }
+
+        &:nth-of-type(n+2){
+            display: none;
+        }
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-family: $mainFontBold;
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    &__text {
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+}
+
+@media #{$tablet-widths} {
+    .advantages {
+        &__wrapper{
+            padding: 0 35px;
+        }
+        &__item {
+            &:nth-of-type(n+2){
+                display: block;
+            }
+            
+            &:before{
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+            }
+            padding: 45px 0 45px 125px;
+            text-align: left;
+            border-bottom: 1px solid $advantages-bottom-border-color;
+            &--expensive {
+                border: none;
+            }
+          
+        }
+    }
+}
+
+@media #{$desktop-widths} {
+    .advantages{
+        &__wrapper {
+            display: flex;
+            padding: 75px 0;
+        }
+        &__item{
+            border: none;
+            position: relative;
+            padding: 125px 45px 0 45px;
+            text-align: center;
+            &:before{
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            &--fast, &--cool {
+                border-right: 1px solid $advantages-bottom-border-color;
+            }
+            &--cool{
+                padding: 125px 60px 0 60px;
+            }
+        }
+    }
+}

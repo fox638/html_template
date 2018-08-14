@@ -1,0 +1,143 @@
+// Подключаем стили библиотек
+@import "libs";
+
+//Подключаем переменные
+@import "vars";
+
+//подключаем миксины
+@import "mixins";
+@import 'helpers/mixins';
+
+@import 'font';
+
+@import "plugins";
+
+html{
+  line-height: 1;
+  font-size: 14px;
+}
+
+body{
+  font-family: $mainFont, sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+  color: #f7f4f1;
+  font-style: normal;
+
+  background-color: $bg-darkgrey;
+}
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
+}
+h1{
+  font-size: 1.7rem;
+  padding: 0 0 15px 0;
+  margin: 0 0 10px 0;
+ 
+}
+ul, li{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+p{
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  color:black;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video{
+  vertical-align: middle;
+}
+
+textarea{
+  resize: none;
+}
+
+section{
+  position: relative;
+  margin-bottom: 20px;
+}
+
+input,
+select,
+button{
+  outline: none;
+}
+*,*:before, *:after{
+  box-sizing: border-box;
+}
+.hide{
+  display: none;
+}
+
+.show{
+  display: block;
+}
+
+::-moz-selection{
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+
+::selection{
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+
+.clearfix:before,
+.clearfix:after{
+  content: " ";
+  display: table;
+
+}
+
+.clearfix:after{
+  clear: both;
+}
+
+
+.clearfix{
+  *zoom: 1;
+}
+
+
+.wrapper{
+  width: 100%;
+  margin: 0 auto;
+}
+main{
+  float: right;
+  width: 77%;
+  padding: 0 0 0 40px;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+@import 'common/base';
+
+@import './block/header';
+@import './block/main-nav';
+@import './block/prices';
+@import './block/advantages';
+@import './block/news';
+
+
+
+// @import 'outlines';
+
+
+// @import './block/reviews';
